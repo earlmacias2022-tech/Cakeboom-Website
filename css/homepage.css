@@ -14,17 +14,25 @@
 
 body {
     margin: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
-.header-container{
+.header-wrapper{
     background-color: var(--primary-color);
+    height: 80px;
+}
+.header-container{
     height: 80px;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 190px;
+    gap: 200px;
+    margin-right: 90px;
     
 }
 
@@ -32,12 +40,14 @@ body {
     display: flex;
     gap: 30px;
     margin: 0 auto;
+
 }
 
-.header-container a{
+.header-container nav a{
     text-decoration: none;
     color: white;
     font-size: 15px;
+      position: relative;
 }
 
 .head-btn{
@@ -47,9 +57,107 @@ body {
     color: #C4162A;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.head-btn:hover{
+    background: #e8e6e6;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(196, 22, 42, 0.25);
 }
 
 .logo{
     width: 250px;
     height: auto;
 }
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+/* Hover animation */
+nav a:hover::after {
+    width: 100%;
+
+}
+
+.hero-container{
+    display: flex;
+}
+
+.hero-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+    height: auto;
+    z-index: 1;
+}
+
+.hero-pic{
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+.hero-discription-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-left: 90px;
+    height: 500px;
+}
+
+.para{
+    color: #C4162A;
+    letter-spacing: 3px;
+}
+
+.hero-main-text{
+    font-size: 85px;
+    line-height: 80px;
+}
+
+.explore-btn{
+
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #C4162A;
+    transition: all 0.3s ease;
+}
+
+.order-btn{
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #C4162A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    border: solid#C4162A 2px;
+}
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
