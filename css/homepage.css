@@ -223,9 +223,11 @@ nav a:hover::after {
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #e8e8e8;
-    border-radius: 9px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     padding-bottom: 10px;
+    border-radius: 14px;
+    border-color: #eee5e7;
+    box-shadow: 0 5px 18px rgba(32, 33, 36, 0.035);
 }
 
 .cake-card:hover {
@@ -235,29 +237,31 @@ nav a:hover::after {
 
 .cake-image {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
     object-position: center;
     display: block;
+    height: 225px;
+    padding: 10px;
+    object-fit: contain;
 }
 
 .cake-info {
-    padding: 11px 12px 12px;
+     padding: 16px;
 }
 
 .cake-info h3 {
     color: #102a3a;
-    font-size: 16px;
+     font-size: 15px;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .cake-info > p:not(.cake-price) {
-    min-height: 34px;
+    min-height: 38px;
     color: #334155;
-    font-size: 11px;
+      font-size: 12px;
     line-height: 1.45;
 }
+
 
 .cake-price {
     color: var(--text-color);
@@ -269,8 +273,8 @@ nav a:hover::after {
 .cake-link {
     display: block;
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 10px;
+    padding: 11px 14px;
+    border-radius: 30px;
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
@@ -288,6 +292,7 @@ nav a:hover::after {
 .view-all-link:hover {
     text-decoration: underline;
 }
+
 
 @media (max-width: 900px) {
     .cakes-grid {
@@ -543,8 +548,16 @@ nav a:hover::after {
     align-items: end;
     gap: 24px;
     margin-bottom: 30px;
+    position: relative;
 }
 
+.about-logo{
+    width: 250px;
+    height: auto;
+    position:absolute;
+    top: -120px;
+    left: -40px;
+}
 .about-highlight .section-eyebrow {
     color: #ffdce2;
 }
@@ -811,37 +824,6 @@ nav a:hover::after {
     font-size: 10px;
 }
 
-/* CAKE CARD POLISH */
-.cake-card {
-    border-radius: 14px;
-    border-color: #eee5e7;
-    box-shadow: 0 5px 18px rgba(32, 33, 36, 0.035);
-}
-
-.cake-image {
-    height: 225px;
-    padding: 10px;
-    background: #fce8ec;
-    object-fit: contain;
-}
-
-.cake-info {
-    padding: 16px;
-}
-
-.cake-info h3 {
-    font-size: 15px;
-}
-
-.cake-info > p:not(.cake-price) {
-    min-height: 38px;
-    font-size: 12px;
-}
-
-.cake-link {
-    border-radius: 30px;
-    padding: 11px 14px;
-}
 
 /* RESPONSIVE LAYOUT */
 @media (max-width: 1000px) {
