@@ -139,6 +139,11 @@ nav a:hover::after {
     transition: all 0.3s ease;
 }
 
+.explore-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(196, 22, 42, 0.25);
+}
+
 .order-btn{
     display: inline-block;
     padding: 12px 30px;
@@ -153,6 +158,11 @@ nav a:hover::after {
     text-decoration: none;
 }
 
+.order-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(196, 22, 42, 0.25);
+}
+
 .hero-buttons {
     display: flex;
     align-items: center;
@@ -164,6 +174,7 @@ nav a:hover::after {
 .cakes-section {
     padding: 10px 7.2% 45px;
     background-color: var(--background-color);
+    margin-top: 30px;
 }
 
 .cakes-container {
@@ -177,6 +188,7 @@ nav a:hover::after {
     align-items: center;
     margin-bottom: 18px;
 }
+
 
 .cakes-heading h2 {
     color: var(--text-color);
@@ -213,6 +225,7 @@ nav a:hover::after {
     border: 1px solid #e8e8e8;
     border-radius: 9px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding-bottom: 10px;
 }
 
 .cake-card:hover {
@@ -221,10 +234,11 @@ nav a:hover::after {
 }
 
 .cake-image {
-    display: block;
     width: 100%;
-    height: 145px;
+    height: 300px;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .cake-info {
@@ -233,7 +247,7 @@ nav a:hover::after {
 
 .cake-info h3 {
     color: #102a3a;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 5px;
 }
@@ -241,13 +255,13 @@ nav a:hover::after {
 .cake-info > p:not(.cake-price) {
     min-height: 34px;
     color: #334155;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.45;
 }
 
 .cake-price {
     color: var(--text-color);
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 700;
     margin: 5px 0 8px;
 }
@@ -255,8 +269,8 @@ nav a:hover::after {
 .cake-link {
     display: block;
     width: 100%;
-    padding: 8px 12px;
-    border-radius: 25px;
+    padding: 10px 12px;
+    border-radius: 10px;
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
