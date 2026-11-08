@@ -14,7 +14,6 @@
 
 body {
     margin: 0;
-    margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
@@ -33,21 +32,19 @@ body {
     align-items: center;
     gap: 200px;
     margin-right: 90px;
-    
 }
 
 .header-container nav{
     display: flex;
     gap: 30px;
     margin: 0 auto;
-
 }
 
 .header-container nav a{
     text-decoration: none;
     color: white;
     font-size: 15px;
-      position: relative;
+    position: relative;
 }
 
 .head-btn{
@@ -83,10 +80,8 @@ nav a::after {
     transition: width 0.3s ease;
 }
 
-/* Hover animation */
 nav a:hover::after {
     width: 100%;
-
 }
 
 .hero-container{
@@ -131,7 +126,7 @@ nav a:hover::after {
 }
 
 .explore-btn{
-
+    display: inline-block;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
@@ -140,10 +135,12 @@ nav a:hover::after {
     font-weight: 600;
     cursor: pointer;
     background-color: #C4162A;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .order-btn{
+    display: inline-block;
     padding: 12px 30px;
     border-radius: 30px;
     color: #C4162A;
@@ -152,8 +149,10 @@ nav a:hover::after {
     cursor: pointer;
     transition: all 0.3s ease;
     background-color: white;
-    border: solid#C4162A 2px;
+    border: solid #C4162A 2px;
+    text-decoration: none;
 }
+
 .hero-buttons {
     display: flex;
     align-items: center;
@@ -161,3 +160,159 @@ nav a:hover::after {
     margin-top: 25px;
 }
 
+/* Featured cakes section */
+.cakes-section {
+    padding: 10px 7.2% 45px;
+    background-color: var(--background-color);
+}
+
+.cakes-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cakes-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.cakes-heading h2 {
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.cakes-heading p {
+    color: #334155;
+    font-size: 13px;
+}
+
+.view-all-link {
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.view-all-link span,
+.cake-link span {
+    margin-left: 4px;
+}
+
+.cakes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.cake-card {
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(32, 33, 36, 0.09);
+}
+
+.cake-image {
+    display: block;
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+.cake-info {
+    padding: 11px 12px 12px;
+}
+
+.cake-info h3 {
+    color: #102a3a;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.cake-info > p:not(.cake-price) {
+    min-height: 34px;
+    color: #334155;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.cake-price {
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px 0 8px;
+}
+
+.cake-link {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cake-link:hover {
+    background-color: #a91022;
+    transform: translateY(-2px);
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .cakes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cakes-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .cakes-heading {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .cakes-heading h2 {
+        font-size: 21px;
+    }
+
+    .cakes-heading p {
+        max-width: 230px;
+        font-size: 12px;
+    }
+
+    .view-all-link {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-top: 7px;
+    }
+
+    .cakes-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cake-image {
+        height: 210px;
+    }
+}
