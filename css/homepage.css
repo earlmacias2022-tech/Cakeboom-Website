@@ -868,6 +868,37 @@ nav a:hover::after {
     .footer-main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .header-container {
+        gap: 18px;
+        padding: 0 24px;
+    }
+
+    .header-container nav {
+        gap: 12px;
+    }
+
+    .header-container nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 155px;
+    }
+
+    .head-btn {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+
+    .hero-container {
+        gap: 22px;
+        padding: 0 28px;
+    }
+
+    .hero-main-text {
+        font-size: clamp(40px, 5.4vw, 58px);
+    }
 }
 
 @media (max-width: 700px) {
@@ -915,6 +946,82 @@ nav a:hover::after {
         flex-direction: column;
         gap: 8px;
     }
+
+    .header-wrapper {
+        height: auto;
+    }
+
+    .header-container {
+        height: auto;
+        padding: 12px 5% 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px 16px;
+    }
+
+    .header-container > div:first-child {
+        order: 1;
+    }
+
+    .header-container > div:nth-child(2) {
+        order: 3;
+        flex: 1 0 100%;
+    }
+
+    .header-container > div:last-child {
+        order: 2;
+    }
+
+    .header-container nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .hero-section {
+        min-height: 0;
+        padding: 38px 0 42px;
+    }
+
+    .hero-container {
+        padding: 0 6%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .hero-cards {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .hero-discription-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-main-text {
+        font-size: clamp(42px, 9vw, 58px);
+    }
+
+    .hero-discription-container p:not(.para) {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero-pic {
+        width: min(100%, 500px);
+        max-height: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -925,6 +1032,50 @@ nav a:hover::after {
 
     .cake-image {
         height: 210px;
+    }
+
+    .header-container {
+        padding: 10px 4% 12px;
+    }
+
+    .header-container nav {
+        gap: 9px 13px;
+    }
+
+    .header-container nav a {
+        font-size: 11px;
+    }
+
+    .head-btn {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+
+    .hero-section {
+        padding: 30px 0 34px;
+    }
+
+    .hero-container {
+        padding: 0 5%;
+        gap: 18px;
+    }
+
+    .hero-main-text {
+        font-size: clamp(38px, 10.5vw, 48px);
+    }
+
+    .hero-discription-container p:not(.para) {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+
+    .explore-btn,
+    .order-btn {
+        padding: 10px 16px;
+        font-size: 12px;
     }
 }
 
