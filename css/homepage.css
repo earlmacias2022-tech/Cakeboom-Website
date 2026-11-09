@@ -159,6 +159,22 @@ nav a:hover::after {
     letter-spacing: -0.035em;
 }
 
+.hero-main-text span {
+    color: var(--primary-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero-discription-container p:not(.para) {
+    width: min(100%, 560px);
+    max-width: 560px;
+    margin: 14px auto 0;
+    color: var(--text-color);
+    font-size: clamp(14px, 1.2vw, 17px);
+    line-height: 1.7;
+}
+
 .explore-btn{
     display: inline-block;
     border: none;
