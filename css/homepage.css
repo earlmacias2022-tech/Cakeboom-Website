@@ -642,6 +642,11 @@ nav a:hover::after {
     letter-spacing: -1.5px;
 }
 
+
+.contact-copy span{
+    color: var(--primary-color);
+}
+
 .contact-copy > p:not(.section-eyebrow) {
     max-width: 470px;
     color: #5b6068;
