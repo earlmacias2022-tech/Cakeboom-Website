@@ -1372,3 +1372,30 @@ nav a:hover::after {
         font-size: 12px;
     }
 }
+
+
+/* Give the existing hero artwork more visual weight on desktop. */
+@media (min-width: 1001px) {
+    .hero-container {
+        gap: clamp(20px, 2.5vw, 40px);
+    }
+
+    .hero-container > .hero-cards:first-child {
+        flex: 0 0 42%;
+        width: 42%;
+        max-width: 42%;
+    }
+
+    .hero-container > .hero-cards:last-child {
+        flex: 0 0 58%;
+        width: 58%;
+        max-width: 58%;
+    }
+
+    .hero-pic {
+        width: 100%;
+        max-width: 760px;
+        max-height: calc(100svh - 145px);
+        object-fit: contain;
+    }
+}
