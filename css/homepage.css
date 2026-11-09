@@ -170,6 +170,10 @@ nav a:hover::after {
     margin-top: 25px;
 }
 
+.hero-section{
+    height: 100vh;
+}
+
 /* Featured cakes section */
 .cakes-section {
     padding: 10px 7.2% 45px;
@@ -908,7 +912,7 @@ nav a:hover::after {
 /* CENTERED SHOP-BY-CATEGORY SECTION */
 .category-section {
     padding: 42px 7% 48px;
-    background: #fffaf8;
+    background: var(--background-color);
 }
 
 .category-container {
@@ -978,9 +982,9 @@ nav a:hover::after {
     display: block;
     width: 150px;
     height: 150px;
-    border: 7px solid #fce8ec;
+    border: 7px solid #e88994;
     border-radius: 50%;
-    background: #fce8ec;
+    background: var(--primary-color);
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -995,7 +999,7 @@ nav a:hover::after {
 
 .category-card:hover img {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(196, 22, 42, 0.15);
+    box-shadow: 0 8px 18px rgba(196, 22, 42, 0.25);
 }
 
 .category-card:hover .category-card-title {
