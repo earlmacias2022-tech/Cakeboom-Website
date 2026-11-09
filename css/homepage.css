@@ -28,9 +28,9 @@ body {
     height: 80px;
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    gap: 200px;
+    gap: 220px;
     margin-right: 90px;
 }
 
