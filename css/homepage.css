@@ -100,19 +100,16 @@ nav a:hover::after {
     min-height: 0;
     margin: 0 auto;
     padding: 0 clamp(24px, 5vw, 72px);
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     align-items: center;
-    justify-content: space-between;
     gap: clamp(20px, 2.5vw, 40px);
 }
 
 .hero-cards {
     display: flex;
-    flex: 1 1 50%;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    max-width: 50%;
     min-width: 0;
     height: auto;
     z-index: 1;
