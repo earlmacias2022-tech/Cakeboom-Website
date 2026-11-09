@@ -1045,3 +1045,470 @@ nav a:hover::after {
         height: 112px;
     }
 }
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT + FULL-VIEWPORT HERO
+   Shared by the homepage and cake catalog.
+   ========================================================= */
+
+/* Prevent media and content from exceeding their containers. */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+}
+
+/* Consistent desktop header sizing. */
+.header-wrapper {
+    height: 80px;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1500px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 64px);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    justify-content: initial;
+    gap: clamp(16px, 2.5vw, 40px);
+}
+
+.header-container > div:nth-child(2) {
+    min-width: 0;
+}
+
+.header-container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 2vw, 28px);
+}
+
+.logo {
+    display: block;
+    width: clamp(150px, 17vw, 230px);
+    max-width: 100%;
+}
+
+/* The header (80px) plus hero fills one desktop viewport. */
+.hero-section {
+    min-height: calc(100vh - 80px);
+    min-height: calc(100svh - 80px);
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(24px, 3vh, 42px) 0;
+}
+
+.hero-container {
+    width: min(100%, 1440px);
+    min-height: calc(100svh - 80px - 6vh);
+    margin: 0 auto;
+    padding: 0 clamp(24px, 5vw, 72px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(24px, 4vw, 64px);
+}
+
+.hero-cards {
+    flex: 1 1 0;
+    width: 50%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+}
+
+.hero-discription-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.hero-main-text {
+    font-size: clamp(42px, 5.7vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+.hero-discription-container p:not(.para) {
+    width: 100% !important;
+    max-width: 510px;
+    font-size: clamp(14px, 1.25vw, 17px) !important;
+    line-height: 1.7;
+}
+
+.para {
+    font-size: clamp(10px, 0.9vw, 13px);
+    line-height: 1.6;
+}
+
+.hero-pic {
+    width: 100%;
+    height: auto;
+    max-height: calc(100svh - 130px);
+    object-fit: contain;
+    object-position: center;
+}
+
+.hero-buttons {
+    flex-wrap: wrap;
+}
+
+/* Tablet layout. */
+@media (max-width: 900px) {
+    .header-container {
+        gap: 16px;
+        padding: 0 24px;
+    }
+
+    .header-container nav {
+        gap: 12px 16px;
+    }
+
+    .header-container nav a {
+        font-size: 13px;
+    }
+
+    .logo {
+        width: 165px;
+    }
+
+    .head-btn {
+        padding: 9px 20px;
+        white-space: nowrap;
+    }
+
+    .hero-container {
+        gap: 20px;
+        padding: 0 28px;
+    }
+
+    .hero-main-text {
+        font-size: clamp(42px, 6vw, 60px);
+    }
+
+    .hero-pic {
+        max-height: calc(100svh - 150px);
+    }
+
+    .about-container {
+        gap: 32px;
+    }
+
+    .contact-container {
+        gap: 32px;
+    }
+
+    .footer-main {
+        gap: 32px 24px;
+    }
+}
+
+/* Small tablets and large phones: stack the hero and navigation. */
+@media (max-width: 700px) {
+    .header-wrapper {
+        height: auto;
+    }
+
+    .header-container {
+        min-height: 0;
+        height: auto;
+        padding: 12px 5% 14px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px 16px;
+    }
+
+    .header-container > div:first-child {
+        order: 1;
+    }
+
+    .header-container > div:nth-child(2) {
+        order: 3;
+        flex: 1 0 100%;
+    }
+
+    .header-container > div:last-child {
+        order: 2;
+    }
+
+    .logo {
+        width: clamp(135px, 35vw, 175px);
+    }
+
+    .header-container nav {
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .header-container nav a {
+        font-size: 12px;
+    }
+
+    .head-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .hero-section {
+        min-height: calc(100vh - 116px);
+        min-height: calc(100svh - 116px);
+        padding: 24px 0 30px;
+    }
+
+    .hero-container {
+        min-height: 0;
+        padding: 0 6%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-cards {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .hero-discription-container {
+        align-items: center;
+        text-align: center;
+        padding: 12px 0 0;
+    }
+
+    .hero-main-text {
+        font-size: clamp(42px, 9vw, 60px);
+        line-height: 1.02;
+    }
+
+    .hero-discription-container p:not(.para) {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .para {
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        margin-top: 18px;
+    }
+
+    .explore-btn,
+    .order-btn {
+        padding: 11px 22px;
+        font-size: 13px;
+    }
+
+    .hero-pic {
+        width: min(100%, 520px);
+        max-height: 38svh;
+        margin: 0 auto;
+    }
+
+    .cakes-section {
+        margin-top: 12px;
+    }
+
+    .about-section,
+    .contact-section {
+        padding: 58px 6%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-highlight {
+        padding: 28px 22px;
+    }
+
+    .about-logo {
+        display: none;
+    }
+
+    .about-highlight-heading {
+        display: block;
+    }
+
+    .about-highlight-heading h2 {
+        margin-top: 8px;
+    }
+
+    .reasons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phone layout. */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px 4% 12px;
+    }
+
+    .header-container nav {
+        gap: 9px 13px;
+    }
+
+    .header-container nav a {
+        font-size: 11px;
+    }
+
+    .head-btn {
+        padding: 7px 13px;
+        font-size: 11px;
+    }
+
+    .hero-section {
+        min-height: calc(100vh - 110px);
+        min-height: calc(100svh - 110px);
+        padding: 18px 0 24px;
+    }
+
+    .hero-container {
+        padding: 0 5%;
+        gap: 6px;
+    }
+
+    .hero-main-text {
+        font-size: clamp(38px, 11vw, 50px);
+    }
+
+    .hero-discription-container p:not(.para) {
+        font-size: 13px !important;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+
+    .explore-btn,
+    .order-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .hero-pic {
+        max-height: 32svh;
+    }
+
+    .cakes-section {
+        padding: 8px 5% 36px;
+    }
+
+    .cakes-heading {
+        flex-wrap: wrap;
+    }
+
+    .cakes-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cake-image {
+        height: 220px;
+    }
+
+    .category-section {
+        padding: 32px 5%;
+    }
+
+    .category-carousel {
+        gap: 22px 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-card img {
+        width: min(112px, 100%);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .about-intro h2,
+    .contact-copy h2 {
+        font-size: clamp(34px, 10vw, 44px);
+    }
+
+    .about-highlight {
+        padding: 24px 16px;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .reason-card {
+        padding: 20px 16px;
+    }
+
+    .contact-form {
+        padding: 24px 18px;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        overflow-wrap: anywhere;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Very short landscape screens: keep hero content from being clipped. */
+@media (max-height: 600px) and (min-width: 701px) {
+    .hero-section {
+        min-height: 520px;
+    }
+
+    .hero-container {
+        min-height: 480px;
+    }
+
+    .hero-pic {
+        max-height: 460px;
+    }
+
+    .hero-main-text {
+        font-size: clamp(42px, 5vw, 58px);
+        line-height: 1;
+    }
+}
