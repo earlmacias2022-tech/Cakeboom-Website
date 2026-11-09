@@ -26,14 +26,13 @@ body {
     background-color: var(--primary-color);
 }
 .header-container {
-    width: min(100%, 1440px);
+    width: min(100%, 1900px);
     height: 80px;
     margin: 0 auto;
     padding: 0 clamp(20px, 4vw, 64px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 28px;
     color: #fff;
     background: var(--primary-color);
 }
@@ -45,6 +44,7 @@ body {
     flex-wrap: nowrap;
     gap: clamp(14px, 2vw, 30px);
     margin: 0;
+    margin-right: 60px;
 }
 
 .header-container nav a {
