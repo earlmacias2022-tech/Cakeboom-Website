@@ -686,7 +686,7 @@ nav a:hover::after {
 
 .contact-copy .contact-title {
     margin-bottom: 12px;
-    font-size: clamp(28px, 3vw, 36px);
+    font-size: clamp(28px, 3vw, 40px);
     letter-spacing: -1px;
 }
 
