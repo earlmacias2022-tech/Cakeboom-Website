@@ -1247,3 +1247,172 @@ nav a:hover::after {
         height: 112px;
     }
 }
+
+
+/* CAKEBOOM HERO REDESIGN */
+.hero-section {
+    min-height: min(760px, calc(100svh - 80px));
+    height: auto;
+    padding: clamp(36px, 5vw, 76px) 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "copy image"
+        "buttons image";
+    align-items: center;
+    justify-content: center;
+    gap: 22px clamp(28px, 5vw, 76px);
+    height: auto;
+    min-height: 560px;
+    padding: 28px clamp(24px, 6vw, 92px);
+    text-align: left;
+}
+
+.hero-discription-container {
+    grid-area: copy;
+    align-items: flex-start;
+    justify-content: end;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-discription-container .para {
+    margin-bottom: 20px;
+}
+
+.hero-main-text {
+    max-width: 650px;
+    font-size: clamp(42px, 5.2vw, 76px);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.hero-discription-container p:not(.para) {
+    max-width: 470px;
+    margin: 20px 0 0;
+    font-size: clamp(14px, 1.15vw, 17px);
+}
+
+.hero-cards {
+    grid-area: image;
+    align-self: stretch;
+    justify-self: stretch;
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: var(--secondary-color);
+}
+
+.hero-pic {
+    width: 100%;
+    height: 100%;
+    max-height: 660px;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+    mix-blend-mode: normal;
+}
+
+.hero-buttons {
+    grid-area: buttons;
+    justify-content: flex-start;
+    align-self: start;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        min-height: 480px;
+        gap: 20px 28px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .hero-main-text {
+        font-size: clamp(36px, 5.5vw, 54px);
+    }
+
+    .hero-cards {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-section {
+        min-height: 0;
+        padding: 30px 0 42px;
+    }
+
+    .hero-container {
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "copy"
+            "image"
+            "buttons";
+        gap: 22px;
+        padding: 20px 6%;
+        text-align: left;
+    }
+
+    .hero-discription-container {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero-main-text {
+        max-width: 600px;
+        font-size: clamp(36px, 8vw, 54px);
+    }
+
+    .hero-discription-container p:not(.para) {
+        margin: 14px 0 0;
+    }
+
+    .hero-cards {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-pic {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        gap: 18px;
+        padding: 16px 5%;
+    }
+
+    .hero-main-text {
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.12;
+    }
+
+    .hero-cards {
+        aspect-ratio: 4 / 3;
+        border-radius: 20px;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+}
