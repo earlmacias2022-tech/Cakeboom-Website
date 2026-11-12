@@ -684,6 +684,16 @@ nav a:hover::after {
     letter-spacing: -2px;
 }
 
+.contact-copy .contact-title {
+    margin-bottom: 12px;
+    font-size: clamp(28px, 3vw, 36px);
+    letter-spacing: -1px;
+}
+
+.contact-copy .contact-title span {
+    color: var(--primary-color);
+}
+
 .contact-copy > p:not(.section-eyebrow):not(.contact-response-note) {
     max-width: 490px;
     color: #5b6068;
@@ -722,6 +732,36 @@ nav a:hover::after {
     margin-top: 14px;
     color: #8a7378;
     font-size: 12px;
+}
+
+.contact-details {
+    display: grid;
+    gap: 17px;
+    margin-top: 30px;
+}
+
+.contact-details > div {
+    display: grid;
+    gap: 4px;
+}
+
+.contact-detail-label {
+    color: var(--primary-color);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.contact-details a,
+.contact-details p {
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
 }
 
 .contact-social-card {
