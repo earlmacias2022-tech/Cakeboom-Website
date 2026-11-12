@@ -794,7 +794,7 @@ nav a:hover::after {
 
 .contact-card-label {
     color: var(--primary-color);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -831,7 +831,8 @@ nav a:hover::after {
     gap: 12px;
 }
 
-.contact-social-links a {
+.contact-social-links a,
+.contact-address-row {
     display: flex;
     align-items: center;
     gap: 13px;
@@ -841,6 +842,16 @@ nav a:hover::after {
     color: var(--text-color);
     text-decoration: none;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-address-row {
+    background: #fff;
+}
+
+.contact-info-icon {
+    background: #fce8ec;
+    color: var(--primary-color);
+    font-size: 20px;
 }
 
 .contact-social-links a:hover {
