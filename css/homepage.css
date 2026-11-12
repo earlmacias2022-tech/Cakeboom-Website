@@ -21,7 +21,7 @@ body {
 }  
 
 .hero-section {
-    background-color: var(--secondary-color);
+       background: linear-gradient(135deg, #fff 0%, #fce8ec 100%);
 }
 
 
@@ -1039,7 +1039,10 @@ nav a:hover::after {
     }
 
     .logo {
-        width: 138px;
+        position: absolute;
+        top: -45px;
+        width: 150px;
+        height: 150px;
     }
 
     .header-container nav {
