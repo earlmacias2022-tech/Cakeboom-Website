@@ -23,6 +23,7 @@
 }
 
 .cake-modal-backdrop {
+  display: block;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -32,6 +33,7 @@
 .cake-modal-panel {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   width: min(880px, 100%);
@@ -44,7 +46,10 @@
 }
 
 .cake-modal-image-wrap {
-  min-height: 100%;
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+  padding: 18px;
   background: #fce8ec;
 }
 
@@ -52,8 +57,9 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 420px;
-  object-fit: cover;
+  max-height: 420px;
+  min-height: 0;
+  object-fit: contain;
 }
 
 .cake-modal-content {
@@ -66,8 +72,8 @@
   z-index: 3;
   pointer-events: auto;
   cursor: pointer;
-  top: 16px;
-  right: 19px;
+  top: 14px;
+  right: 14px;
   display: grid;
   width: 36px;
   height: 36px;
@@ -196,9 +202,15 @@
     border-radius: 17px;
   }
 
+  .cake-modal-image-wrap {
+    min-height: 190px;
+    padding: 12px;
+  }
+
   .cake-modal-image {
-    height: 220px;
-    min-height: 220px;
+    height: 190px;
+    max-height: 190px;
+    min-height: 0;
   }
 
   .cake-modal-content {
@@ -273,6 +285,6 @@
 
 @media (max-width: 680px) {
   .cake-modal-image-placeholder {
-    min-height: 220px;
+    min-height: 190px;
   }
 }
