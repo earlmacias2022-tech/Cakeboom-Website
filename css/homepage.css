@@ -291,8 +291,8 @@ nav a:hover::after {
     width: 100%;
     object-position: center;
     display: block;
-    height: 225px;
-    padding: 10px;
+    height: 190px;
+    padding: 12px;
     object-fit: contain;
 }
 
@@ -384,7 +384,7 @@ nav a:hover::after {
     }
 
     .cake-image {
-        height: 210px;
+        height: 175px;
     }
 }
 
@@ -1243,7 +1243,7 @@ nav a:hover::after {
     }
 
     .cake-image {
-        height: 210px;
+        height: 175px;
     }
 
     .footer-bottom {
