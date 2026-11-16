@@ -25,6 +25,7 @@
 .cake-modal-backdrop {
   position: fixed;
   inset: 0;
+  z-index: 0;
   cursor: default;
 }
 
@@ -62,6 +63,9 @@
 
 .cake-modal-close {
   position: absolute;
+  z-index: 3;
+  pointer-events: auto;
+  cursor: pointer;
   top: 16px;
   right: 19px;
   display: grid;
@@ -213,4 +217,43 @@
 
 @media (prefers-reduced-motion: reduce) {
   .cake-modal-panel { animation: none; }
+}
+
+
+/* Size and price list inside cake detail modals */
+.cake-modal-pricing-list {
+  display: grid;
+  gap: 0;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #f2d9de;
+  border-radius: 12px;
+}
+
+.cake-modal-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 11px 14px;
+  background: #fff9fa;
+  color: #555861;
+  font-size: 12px;
+}
+
+.cake-modal-price-row + .cake-modal-price-row {
+  border-top: 1px solid #f2d9de;
+}
+
+.cake-modal-price-row strong {
+  flex: 0 0 auto;
+  color: #c4162a;
+  font-size: 13px;
+}
+
+.cake-modal-pricing-note {
+  margin: 10px 0 0;
+  color: #8a6a70;
+  font-size: 11px;
+  line-height: 1.65;
 }
