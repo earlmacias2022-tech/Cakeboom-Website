@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -685,7 +686,7 @@ nav a:hover::after {
 }
 
 .contact-copy .contact-title {
-    margin-bottom: 12px;
+    
     font-size: clamp(28px, 3vw, 40px);
     letter-spacing: -1px;
 }
@@ -1147,6 +1148,10 @@ nav a:hover::after {
         top: -45px;
         width: 150px;
         height: 150px;
+    }
+
+    .section-eyebrow{
+        display: none;
     }
 
     .header-container nav {
