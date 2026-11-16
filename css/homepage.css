@@ -1398,3 +1398,13 @@ nav a:hover::after {
         height: 112px;
     }
 }
+
+.cake-image-placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #fce8ec, #fff7f8);
+  color: #c4162a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
