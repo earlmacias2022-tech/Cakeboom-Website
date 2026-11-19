@@ -62,21 +62,28 @@ body {
 }
 
 .head-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 30px;
     border: 0;
     border-radius: 30px;
+    background: #fff;
     color: var(--primary-color);
     font-family: inherit;
+    font-size: 13px;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.head-btn:hover{
-    background: #e8e6e6;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(196, 22, 42, 0.25);
+.head-btn:hover {
+    background: #f8e8eb;
+    color: #a91022;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(32, 33, 36, 0.16);
 }
 
 .logo {
@@ -99,6 +106,17 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f3a9b5;
+    outline-offset: 4px;
+}
+
+::selection {
+    background: #fce8ec;
+    color: #202124;
 }
 
 .hero-container {
@@ -272,19 +290,20 @@ nav a:hover::after {
 }
 
 .cake-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     overflow: hidden;
-    background-color: #fff;
-    border: 1px solid #e8e8e8;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
     padding-bottom: 10px;
+    border: 1px solid #eee5e7;
     border-radius: 14px;
-    border-color: #eee5e7;
-    box-shadow: 0 5px 18px rgba(32, 33, 36, 0.035);
+    background-color: #fff;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .cake-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(32, 33, 36, 0.09);
+    transform: translateY(-3px);
+    border-color: #e8b9c1;
 }
 
 .cake-image {
@@ -297,7 +316,10 @@ nav a:hover::after {
 }
 
 .cake-info {
-     padding: 16px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px;
 }
 
 .cake-info h3 {
@@ -308,10 +330,10 @@ nav a:hover::after {
 }
 
 .cake-info > p:not(.cake-price) {
-    min-height: 38px;
-    color: #334155;
-      font-size: 12px;
-    line-height: 1.45;
+    min-height: 3.2em;
+    color: #555b64;
+    font-size: 12px;
+    line-height: 1.6;
 }
 
 
@@ -324,6 +346,7 @@ nav a:hover::after {
 
 .cake-link {
     display: block;
+    margin-top: auto;
     width: 100%;
     padding: 11px 14px;
     border-radius: 30px;
@@ -770,9 +793,8 @@ nav a:hover::after {
     overflow: hidden;
     padding: clamp(28px, 4vw, 46px);
     border: 1px solid #f2d9de;
-    border-radius: 26px;
+    border-radius: 20px;
     background: #fff;
-    box-shadow: 0 22px 55px rgba(80, 30, 40, 0.09);
 }
 
 .contact-social-card::after {
@@ -1124,6 +1146,13 @@ nav a:hover::after {
         display: block;
     }
 
+    .about-logo {
+        position: static;
+        display: block;
+        width: clamp(100px, 24vw, 140px);
+        margin: 0 0 18px;
+    }
+
     .about-highlight-heading h2 {
         margin-top: 10px;
     }
@@ -1144,14 +1173,16 @@ nav a:hover::after {
     }
 
     .logo {
-        position: absolute;
-        top: -45px;
-        width: 150px;
-        height: 150px;
+        position: static;
+        width: clamp(112px, 31vw, 145px);
+        height: auto;
     }
 
-    .section-eyebrow{
-        display: none;
+    .section-eyebrow {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
     }
 
     .header-container nav {
