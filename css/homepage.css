@@ -1872,7 +1872,7 @@ button:focus-visible {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 8px;
         padding: 0 5%;
     }
@@ -1882,21 +1882,24 @@ button:focus-visible {
     }
 
     .header-container > .mobile-menu {
-        order: 1;
+        order: 1 !important;
         display: block;
         position: relative;
-        flex: 0 0 auto;
-        margin: 0;
+        flex: 0 0 28px;
+        width: 28px;
+        margin: 0 !important;
     }
 
     .header-container .mobile-menu summary {
-        display: grid;
-        width: 42px;
-        height: 42px;
-        place-items: center;
+        display: flex;
+        width: 28px;
+        height: 38px;
+        align-items: center;
+        justify-content: flex-start;
         padding: 0;
-        border: 1px solid rgba(255,255,255,0.65);
-        border-radius: 50%;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
         color: #fff;
         cursor: pointer;
     }
@@ -1916,10 +1919,10 @@ button:focus-visible {
     }
 
     .header-container > .header-brand {
-        order: 2;
+        order: 2 !important;
         flex: 0 1 auto;
         min-width: 0;
-        margin: 0 auto 0 4px;
+        margin: 0 !important;
         text-align: left;
     }
 
@@ -1930,15 +1933,15 @@ button:focus-visible {
     }
 
     .header-container > .head-btn {
-        order: 3;
+        order: 3 !important;
         flex: 0 0 auto;
-        margin: 0 0 0 auto;
+        margin: 0 0 0 auto !important;
         padding: 9px 14px;
         font-size: 11px;
     }
 
     .header-container .mobile-menu[open] summary {
-        background: rgba(255,255,255,0.13);
+        background: transparent;
     }
 
     .header-container .mobile-menu nav {
