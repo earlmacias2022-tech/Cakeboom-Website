@@ -21,34 +21,35 @@
     <title>Cakeboom</title>
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="header-wrapper">
         <div class="header-container">
-          <div>
-            <img
-              class="logo"
-              src="/assets/images/cakeboom-logo.png"
-              alt="CakeBoom Logo"
-            />
+          <div class="header-brand">
+            <a href="#home" aria-label="CAKEBOOM home">
+              <img class="logo" src="/assets/images/cakeboom-logo.png" alt="CakeBoom Logo" />
+            </a>
           </div>
-          <div>
-            <nav>
+          <nav class="desktop-nav" aria-label="Main navigation">
+              <a href="#home">Home</a>
+              <a href="/pages/cakes.html">Our Cakes</a>
+              <a href="#bestsellers">Best Sellers</a>
+              <a href="#about">About Us</a>
+              <a href="#contact">Contact</a>
+          </nav>
+          <details class="mobile-menu">
+            <summary aria-label="Open navigation menu">
+              <span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>Menu</span>
+            </summary>
+            <nav aria-label="Mobile navigation">
               <a href="#home">Home</a>
               <a href="/pages/cakes.html">Our Cakes</a>
               <a href="#bestsellers">Best Sellers</a>
               <a href="#about">About Us</a>
               <a href="#contact">Contact</a>
             </nav>
-          </div>
-          <div>
-            <a
-              class="head-btn"
-              href="https://www.facebook.com/tastehappiness"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Order Now</a
-            >
-          </div>
+          </details>
+          <a class="head-btn" href="https://www.facebook.com/tastehappiness" target="_blank" rel="noopener noreferrer">Order Now</a>
         </div>
       </div>
     </header>
@@ -297,89 +298,30 @@
       </section>
 
       <section class="about-section" id="about">
-        <div class="about-container">
-          <div class="about-intro">
-            <h2><span>About Us</span></h2>
+        <div class="about-story-wrap">
+          <div class="about-story-copy">
             <p class="section-eyebrow">THE STORY BEHIND THE SWEETNESS</p>
-            <h2>More than cake.<br /><span>It's a little joy.</span></h2>
+            <h2>Every moment<br />deserves a little <span>CAKEBOOM.</span></h2>
+            <p class="about-story-lead">A little sweetness can turn an ordinary day into a moment worth remembering.</p>
+            <p>At CAKEBOOM, we create cakes and sweet treats for the moments that matter. From simple afternoon cravings to once-in-a-lifetime celebrations, every order is made with care, creativity, and a love for good cake.</p>
+            <a class="about-link" href="#contact">Let's make something sweet <span>→</span></a>
           </div>
-          <div class="about-copy">
-            <p class="about-lead">
-              A little sweetness can turn an ordinary day into a moment worth
-              remembering.
-            </p>
-            <p>
-              At CAKEBOOM, we create cakes and sweet treats for the moments that
-              matter. From simple afternoon cravings to once-in-a-lifetime
-              celebrations, every order is made with care, creativity, and a
-              love for good cake.
-            </p>
-            <a class="about-link" href="#contact"
-              >Get to know us <span>→</span></a
-            >
+          <div class="about-story-visual">
+            <img src="/assets/images/cake-hero-03.png" alt="A CAKEBOOM celebration cake" />
+            <div class="about-photo-note"><span>MADE FOR YOUR MOMENTS</span><strong>Freshly baked.<br />Thoughtfully made.</strong></div>
           </div>
         </div>
-        <div class="about-highlight">
-          <div class="about-highlight-heading">
-            <img
-              class="about-logo"
-              src="/assets/images/cakeboom-logo.png"
-              alt="Cakeboom logo"
-            />
+        <div class="about-values">
+          <div class="about-values-heading">
             <p class="section-eyebrow">WHY CAKEBOOM</p>
-            <h2>Made to make<br />your moments sweeter.</h2>
+            <h2>Good cake. Good moments.</h2>
+            <p>Little details that make every celebration feel special.</p>
           </div>
-          <div class="reasons">
-            <article class="reason-card">
-              <span class="reason-number">01</span>
-              <img
-                class="icon"
-                src="assets/images/leaf-solid-full.svg"
-                alt=""
-              />
-              <h3>Quality Ingredients</h3>
-              <p>
-                Thoughtfully selected ingredients for treats worth coming back
-                to.
-              </p>
-            </article>
-            <article class="reason-card">
-              <span class="reason-number">02</span>
-              <img
-                class="icon"
-                src="assets/images/heart-solid-full.svg"
-                alt=""
-              />
-              <h3>Made with Care</h3>
-              <p>
-                Every cake is prepared with attention to the little details.
-              </p>
-            </article>
-            <article class="reason-card">
-              <span class="reason-number">03</span>
-              <img
-                class="icon"
-                src="assets/images/cake-candles-solid-full.svg"
-                alt=""
-              />
-              <h3>For Every Occasion</h3>
-              <p>
-                Sweet centrepieces for birthdays, milestones, and everyday wins.
-              </p>
-            </article>
-            <article class="reason-card">
-              <span class="reason-number">04</span>
-              <img
-                class="icon"
-                src="assets/images/face-smile-solid-full.svg"
-                alt=""
-              />
-              <h3>Made for You</h3>
-              <p>
-                Friendly service and thoughtful touches from first message to
-                first bite.
-              </p>
-            </article>
+          <div class="about-values-grid">
+            <article class="about-value-card"><span>01</span><h3>Quality Ingredients</h3><p>Thoughtfully selected ingredients for treats worth coming back to.</p></article>
+            <article class="about-value-card"><span>02</span><h3>Made with Care</h3><p>Every cake is prepared with attention to the little details.</p></article>
+            <article class="about-value-card"><span>03</span><h3>For Every Occasion</h3><p>Sweet centrepieces for birthdays, milestones, and everyday wins.</p></article>
+            <article class="about-value-card"><span>04</span><h3>Made for You</h3><p>Friendly service and thoughtful touches from first message to first bite.</p></article>
           </div>
         </div>
       </section>
@@ -465,6 +407,10 @@
                   ></span
                 >
               </div>
+            </div>
+            <div class="contact-map-card">
+              <div class="contact-map-heading"><span>FIND CAKEBOOM</span><a href="https://www.google.com/maps?q=8.1553702227036,125.12899786239" target="_blank" rel="noopener noreferrer">Open in Maps ↗</a></div>
+              <iframe title="CAKEBOOM shop location map" src="https://www.google.com/maps?q=8.1553702227036,125.12899786239&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
           </div>
         </div>
