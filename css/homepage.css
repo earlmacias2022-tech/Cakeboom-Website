@@ -1852,3 +1852,14 @@ button:focus-visible {
         font-size: 10px;
     }
 }
+
+/* Keep desktop and disclosure navigation independent of legacy header rules */
+.header-container .desktop-nav {
+    margin: 0;
+}
+.header-container .mobile-menu nav {
+    margin: 0;
+    flex-wrap: initial;
+    justify-content: initial;
+    align-items: stretch;
+}
