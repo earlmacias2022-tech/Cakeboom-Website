@@ -126,11 +126,20 @@ button:focus-visible {
     padding: clamp(38px, 5vw, 76px) clamp(28px, 5vw, 82px);
     display: grid;
     grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    grid-template-areas:
+        "copy image"
+        "actions image";
+    grid-template-rows: auto auto;
     align-items: center;
     gap: clamp(28px, 4vw, 64px);
 }
 
-.hero-cards {
+.hero-discription-container {
+    grid-area: copy;
+}
+
+.hero-image-container {
+    grid-area: image;
     min-width: 0;
     min-height: 0;
     display: flex;
@@ -234,10 +243,11 @@ button:focus-visible {
 }
 
 .hero-buttons {
+    grid-area: actions;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 26px;
+    margin-top: 0;
 }
 
 /* Featured cakes section */
@@ -1094,12 +1104,32 @@ button:focus-visible {
     .hero-container {
         min-height: 0;
         grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
+        grid-template-areas:
+            "copy"
+            "image"
+            "actions";
+        grid-template-rows: auto auto auto;
+        gap: 22px;
         padding: 34px 6% 30px;
     }
 
     .hero-discription-container {
         max-width: 680px;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-discription-container p,
+    .hero-discription-container > p:not(.para) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        margin-top: 0;
     }
 
     .hero-main-text {
