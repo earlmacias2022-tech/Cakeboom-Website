@@ -21,33 +21,35 @@
     <title>Cakeboom</title>
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="header-wrapper">
         <div class="header-container">
-          <div>
-            <img
-              class="logo"
-              src="/assets/images/cakeboom-logo.png"
-              alt="CakeBoom Logo"
-            />
+          <div class="header-brand">
+            <a href="/index.html" aria-label="CAKEBOOM home">
+              <img class="logo" src="/assets/images/cakeboom-logo.png" alt="CakeBoom Logo" />
+            </a>
           </div>
-          <div>
-            <nav>
+          <nav class="desktop-nav" aria-label="Main navigation">
+              <a href="/index.html">Home</a>
+              <a href="/pages/cakes.html">Our Cakes</a>
+              <a href="#bestsellers">Best Sellers</a>
+              <a href="/index.html#about">About Us</a>
+              <a href="/index.html#contact">Contact</a>
+          </nav>
+          <details class="mobile-menu">
+            <summary aria-label="Open navigation menu">
+              <span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>Menu</span>
+            </summary>
+            <nav aria-label="Mobile navigation">
               <a href="/index.html">Home</a>
               <a href="/pages/cakes.html">Our Cakes</a>
               <a href="#bestsellers">Best Sellers</a>
               <a href="/index.html#about">About Us</a>
               <a href="/index.html#contact">Contact</a>
             </nav>
-          </div>
-          <div>
-            <a
-              class="head-btn"
-              href="https://www.facebook.com/tastehappiness"
-              target="_blank" rel="noopener noreferrer"
-              >Order Now</a
-            >
-          </div>
+          </details>
+          <a class="head-btn" href="https://www.facebook.com/tastehappiness" target="_blank" rel="noopener noreferrer">Order Now</a>
         </div>
       </div>
     </header>
